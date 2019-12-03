@@ -3,7 +3,10 @@ jdk:
   - openjdk8
 script:
   - mvn clean install -DskipTests=true
-
+before_deploy:
+  # Set up git user name and tag this commit
+  - git config --local user.name "lihongjie0209"
+  - git config --local user.email "lihongjie0209@gmail.com"
 
 deploy:
   provider: releases
