@@ -3,3 +3,10 @@ jdk:
   - openjdk8
 script:
   - mvn clean install -DskipTests=true
+
+
+deploy:
+  provider: releases
+  api_key: "940b3211502a868d98166c4afc94c592aa347615"
+  file: ./target/cli-demo-1.0-SNAPSHOT.jar
+  skip_cleanup: true
